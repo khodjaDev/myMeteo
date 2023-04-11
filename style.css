@@ -1,0 +1,214 @@
+
+
+
+.cardm {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 46.64%;
+    left: 50%;
+  }
+  
+  .card {
+    position: absolute;
+    width: 250px;
+    height: 130px;
+    border-radius: 25px;
+    background: whitesmoke;
+    color: black;
+    z-index: 2;
+    transition: .4s ease-in-out;
+  }
+  
+  .weather {
+    position: relative;
+    margin: 1em;
+  }
+  
+  .main {
+    font-size: 2em;
+    position: relative;
+    top: -3em;
+    left: 4.3em;
+  }
+  
+  .mainsub {
+    position: relative;
+    top: -3.2em;
+    left: 4em;
+    font-size: 2rem;
+  }
+  
+  .card2 {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    width: 240px;
+    height: 130px;
+    border-radius: 35px;
+    background: white;
+    z-index: -1;
+    transition: .4s ease-in-out;
+  }
+  
+  .card:hover {
+    background-color: #FFE87C;
+    cursor: pointer;
+  }
+  
+  .card:hover + .card2 {
+    height: 300px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  
+  .card:hover + .card2 .lower {
+    top: 20.2em;
+  }
+  
+  .upper {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    color: black;
+    left: 1.8em;
+    top: 0.5em;
+    gap: 4em;
+  }
+  
+  .humiditytext {
+    position: relative;
+    left: 3.6em;
+    top: 2.7em;
+    font-size: 0.6em;
+  }
+  
+  .airtext {
+    position: relative;
+    left: 3.8em;
+    top: 2.7em;
+    font-size: 0.6em;
+  }
+  
+  .lower {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    text-align: center;
+    color: black;
+    left: 3em;
+    top: 1em;
+    margin-top: 0.7em;
+    font-size: 0.7em;
+    transition: .4s ease-in-out;
+  }
+  
+  .aqi {
+    margin-right: 3.25em;
+  }
+  
+  .realfeel {
+    margin-right: 1.8em;
+  }
+  
+  .card3 {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 240px;
+    height: 30px;
+    top: 4.7em;
+    left: -2.4em;
+    font-size: 1.24em;
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    background: limegreen;
+    transition: .4s ease-in-out;
+  }
+  
+  /*****************Input***************/
+  .container-input {
+    position: relative;
+  }
+  
+  .input {
+    width: 150px;
+    padding: 10px 0px 10px 20px;
+    border-radius: 9999px;
+    border: solid 1px #333;
+    transition: all .2s ease-in-out;
+    outline: none;
+    opacity: 0.8;
+  }
+  
+  .container-input svg {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translate(0, -50%);
+  }
+  
+  .input:focus {
+    opacity: 1;
+    width: 250px;
+  }
+  
+  /*******************Button *******************/
+  /* === removing default button style ===*/
+  .button {
+    margin: 0;
+    height: auto;
+    background: transparent;
+    padding: 0;
+    border: none;
+  }
+  
+  /* button styling */
+  .button {
+    --border-right: 6px;
+    --text-stroke-color: rgba(255,255,255,0.6);
+    --animation-color: #37FF8B;
+    --fs-size: 2em;
+    letter-spacing: 3px;
+    text-decoration: none;
+    font-size: var(--fs-size);
+    font-family: "Arial";
+    position: relative;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--text-stroke-color);
+  }
+  /* this is the text, when you hover on button */
+  .hover-text {
+    position: absolute;
+    box-sizing: border-box;
+    content: attr(data-text);
+    color: var(--animation-color);
+    width: 0%;
+    inset: 0;
+    border-right: var(--border-right) solid var(--animation-color);
+    overflow: hidden;
+    transition: 0.5s;
+    -webkit-text-stroke: 1px var(--animation-color);
+  }
+  /* hover */
+  .button:hover .hover-text {
+    width: 100%;
+    filter: drop-shadow(0 0 23px var(--animation-color))
+  }
+  
+  /***********************************flexbox******************/
+  
+  .ccontainer{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+  }
+  
+  body{
+    background-color: rgb(38, 135, 247);
+  }
